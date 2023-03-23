@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "init": "npx pnpm@6 i",
+    "kill-port": "kill-port --port 3000,3001",
+    "start": "npm run kill-port && npx pnpm@6 run --filter=!root --parallel start"
+  },
+  "dependencies": {
+    "kill-port": "^1.6.1"
+  }
+}
